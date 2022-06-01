@@ -1,2 +1,0 @@
--- SQL Query to purge EntryAuditTrail based on whether a history record exists or not
-delete from dbo.EntryAuditTrail where not exists (select * from dbo.Hist where Hist.jams_id = EntryAuditTrail.jams_id)
